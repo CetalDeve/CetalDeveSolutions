@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+@layer components {
+
+    .text{
+        @apply font-semibold text-white sm:text-xl uppercase
+    }
+
+    .slate_background_yellow {
+        @apply bg-yellow-400 bg-opacity-40 
+    }
+
+    .slate_background {
+        @apply bg-stone-400 bg-opacity-40 
+    }
+
+    .page_background {
+        @apply bg-slate-400 bg-opacity-10 
+    }
+
+    .services_text {
+        @apply uppercase font-semibold text-center
+    }
+
+    .footer_background {
+        @apply bg-purple-900 bg-opacity-50 mt-4 
+    }
+
+    .footer_top_bottom {
+        @apply bg-purple-800 bg-opacity-50
+    }
+
+    .btn {
+        @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
+    }
+}

@@ -1,0 +1,47 @@
+[
+    {
+        "cardTitle": {
+            "position": "Automation Tester",
+            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+        },
+        "jobDescription": {
+            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+        }
+    },
+    {
+        "cardTitle": {
+            "position": "Java Developer",
+            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+        },
+        "jobDescription": {
+            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+        }
+    },
+    {
+        "cardTitle": {
+            "position": "UI Engineer",
+            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+        },
+        "jobDescription": {
+            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+        }
+    },
+    {
+        "cardTitle": {
+            "position": "DevOps Engineer",
+            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+        },
+        "jobDescription": {
+            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+        }
+    },
+    {
+        "cardTitle": {
+            "position": "QE Tester",
+            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+        },
+        "jobDescription": {
+            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+        }
+    }
+]
