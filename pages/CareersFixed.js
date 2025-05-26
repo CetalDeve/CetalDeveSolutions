@@ -19,10 +19,9 @@ export default function Careers() {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-5xl font-bold text-secondary-900 mb-6">
               Join Our <span className="modern-text-gradient">Expert Team</span>
-            </h1>
-            <p className="text-xl text-secondary-600 mb-8 leading-relaxed">
+            </h1>            <p className="text-xl text-secondary-600 mb-8 leading-relaxed">
               Build your career with us and be part of innovative projects that shape the future. 
-              We're always looking for talented individuals who are passionate about excellence.
+              We&apos;re always looking for talented individuals who are passionate about excellence.
             </p>
             <p className="text-lg text-secondary-500">
               Send your resume or contact us if you are interested in our job offers.
@@ -85,9 +84,8 @@ export default function Careers() {
           {careerData.length === 0 && (
             <div className="text-center py-16">
               <BriefcaseIcon className="w-16 h-16 text-secondary-300 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">No Open Positions</h3>
-              <p className="text-secondary-600 mb-6">
-                We don't have any open positions at the moment, but we're always interested in meeting talented people.
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">No Open Positions</h3>              <p className="text-secondary-600 mb-6">
+                We don&apos;t have any open positions at the moment, but we&apos;re always interested in meeting talented people.
               </p>
               <Link href="/Contact">
                 <a className="modern-btn-secondary">
@@ -104,9 +102,8 @@ export default function Careers() {
         <div className="modern-container py-16">
           <div className="text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Join Our Team?</h2>
-            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Don't see a position that fits? We're always looking for exceptional talent. 
-              Send us your resume and let's start a conversation.
+            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">              Don&apos;t see a position that fits? We&apos;re always looking for exceptional talent. 
+              Send us your resume and let&apos;s start a conversation.
             </p>
             <Link href="/Contact">
               <a className="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors">
