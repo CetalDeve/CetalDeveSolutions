@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function PostPage({
   frontmatter: { title, date, cover_image },
@@ -17,9 +16,8 @@ export default function PostPage({
           <a className="btn">Go Back</a>
         </Link>
         <div className="text-center">
-          <h1 className="font-bold text-2xl mt-4 ">{title}</h1>
-          <div className="post-date mt-3">Posted on {date}</div>
-          <Image src={cover_image} alt="logo" width={300} height={300} />
+          <h1 className="font-bold text-2xl mt-4 ">{title}</h1>          <div className="post-date mt-3">Posted on {date}</div>
+          <img src={cover_image} alt="logo" width={300} height={300} />
         </div>
 
         <div className="text-start">

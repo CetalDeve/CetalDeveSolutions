@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import proudStories from './ProudStories.json';
 
 export default function ProudStories() {
@@ -17,14 +16,11 @@ export default function ProudStories() {
           </div>
           
           {/* Author Info */}
-          <div className="flex items-center space-x-4">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-primary-100">
-              <Image 
+          <div className="flex items-center space-x-4">            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-primary-100">
+              <img 
                 src="/avatar.png" 
                 alt={story.name}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-full"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
             <div>

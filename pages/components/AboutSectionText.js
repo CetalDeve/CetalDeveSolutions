@@ -3,7 +3,6 @@ import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
-import Image from "next/image";
 import { Container } from "@mui/system";
 
 export default function AboutSectionText() {

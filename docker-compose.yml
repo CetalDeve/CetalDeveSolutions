@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # Development service
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+
+  # Production build service
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    volumes:
+      - ./out:/app/out
+    environment:
+      - NODE_ENV=production
+    command: npm run build
+
+  # Production static server
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: static
+    ports:
+      - "8080:80"
+    depends_on:
+      - build
+    restart: unless-stopped
+
+  # Optional: Database service (if needed in future)
+  # database:
+  #   image: postgres:15-alpine
+  #   environment:
+  #     POSTGRES_DB: cetal_db
+  #     POSTGRES_USER: cetal_user
+  #     POSTGRES_PASSWORD: your_password
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   postgres_data:

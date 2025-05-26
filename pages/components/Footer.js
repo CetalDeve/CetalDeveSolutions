@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
@@ -11,9 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
-                <Image 
+            <div className="flex items-center space-x-3 mb-6">              <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
+                <img 
                   src="/logo.png" 
                   alt="Cetal Deve Solutions" 
                   width={32} 

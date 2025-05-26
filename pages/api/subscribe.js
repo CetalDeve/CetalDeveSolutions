@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default async (req, res) => {
+const handler = async (req, res) => {
   const { email, firstName, lastName, phoneNumber, message } = req.body
   
   if (!email || !email.length) {
@@ -46,3 +46,5 @@ export default async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
+
+export default handler;

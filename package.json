@@ -5,8 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build-static": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "export": "next export",
+    "deploy": "npm run build-static",
+    "lint": "next lint --fix",
+    "clean": "rimraf .next out"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -41,6 +45,7 @@
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "json-loader": "^0.5.7",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.1.8"
   }
 }

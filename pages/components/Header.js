@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -22,9 +21,8 @@ function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
-              <a className="flex items-center space-x-2">
-                <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
-                  <Image 
+              <a className="flex items-center space-x-2">                <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
+                  <img 
                     src="/logo.png" 
                     alt="Cetal Deve Solutions" 
                     width={32} 
