@@ -1,39 +1,67 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import React from "react";
+import Link from "next/link";
 import services from "./Services.json";
-import { maxWidth } from "@mui/system";
+import { ChartBarIcon, UserGroupIcon, CodeBracketIcon, ClipboardDocumentListIcon } from '@heroicons/react/24/outline';
+
+const iconMap = {
+  "STAFF AUGMENTATION": UserGroupIcon,
+  "HUMAN RESOURCES": UserGroupIcon,
+  "APPLICATION DEVELOPMENT": CodeBracketIcon,
+  "PROJECT MANAGEMENT": ClipboardDocumentListIcon,
+};
 
 export default function Services() {
   return (
-    <>
-    <div className="flex flex-col md:flex-none md:flex-row gap-4 justify-center p-2 md:p-10">
-      <Typography className="text-center text-white text-xl md:text-3xl font-semibold p-4 border-4 rounded-2xl bg-yellow-400" gutterBottom>
-          SERVICES
-      </Typography>
+    <section id="services" className="section-padding bg-white">
+      <div className="modern-container">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="section-title">Our Services</h2>
+          <p className="section-subtitle">
+            We provide comprehensive solutions tailored to accelerate your business growth 
+            and drive digital transformation across all dimensions of your organization.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => {
+            const IconComponent = iconMap[service.title] || ChartBarIcon;
+            
+            return (
+              <div key={index} className="modern-card group hover:scale-105 transition-transform duration-300">
+                <div className="flex flex-col items-center text-center">
+                  {/* Icon */}
+                  <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-200 transition-colors duration-300">
+                    <IconComponent className="w-8 h-8 text-primary-600" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+                    {service.title}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-secondary-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">          <p className="text-lg text-secondary-600 mb-8">
+            Ready to transform your business? Let&apos;s discuss your specific needs.
+          </p>
+          <Link href="/Contact">
+            <a className="modern-btn-primary text-lg px-8 py-4">
+              Schedule a Consultation
+            </a>
+          </Link>
+        </div>
       </div>
-      <div className="flex flex-row gap-10 m-2 ">
-      {services.map((service, index) => (
-        <Card key={index} className=" md:max-h-full" sx={{ maxHeight: {xs:150, sm:345}}}>
-          <CardContent className=' items-center'>
-            <Typography
-              className="services_text text-xs sm:text-3xl"
-              gutterBottom
-              variant="h5"
-              component="div"
-            >
-              {service.title}
-            </Typography>
-            <Typography className="text-[0px] sm:text-xl" variant="body2" color="text.secondary" component="div">
-              {service.description}
-            </Typography>
-          </CardContent>
-        </Card>
-      ))
-      }
-    </div>
-    </>
+    </section>
   );
 }

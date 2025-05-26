@@ -1,26 +1,26 @@
 [
     {
-        "name": "Jason Sudoku",
-        "title": "QE Engineer",
-        "comments": "I am proud to say that I chose Cetal Deve to persue my career.",
-        "quote": "Good place to work"
+        "name": "Jason Rodriguez",
+        "title": "QE Engineer at TechCorp",
+        "comments": "Cetal Deve Solutions transformed our testing processes and helped us achieve 40% faster deployment cycles. Their expertise in quality engineering is unmatched.",
+        "quote": "Exceptional Results"
     },
     {
         "name": "Lorena Watson",
-        "title": "Manager",
-        "comments": "We were growing very rapidly and I needed resources for my company. Cetal Deve solutions helped me to find the matching resources for my team",
-        "quote": "Good place to work"
+        "title": "VP of Operations at InnovateCo",
+        "comments": "We were scaling rapidly and needed strategic guidance. Cetal Deve's team provided invaluable insights that streamlined our operations and reduced costs by 25%.",
+        "quote": "Strategic Partnership"
     },
     {
-        "name": "Jason Sudoku",
-        "title": "Human Resources",
-        "comments": "Cetal Deve Solutions helped me to find the perfect candidate for my Quality Assurance team. I look forward to working with them again.",
-        "quote": "Good place to work"
+        "name": "Michael Chen",
+        "title": "CTO at DataFlow Systems",
+        "comments": "The application development team at Cetal Deve delivered a robust, scalable solution that exceeded our expectations. Their technical expertise is world-class.",
+        "quote": "Outstanding Technology"
     },
     {
         "name": "Sophia Miller",
-        "title": "Human Resources",
-        "comments": "Our business has consistently hired consultants from Cetal Deve. They always have a great match for our business requirements.",
-        "quote": "Good place to work"
+        "title": "HR Director at GrowthTech",
+        "comments": "Finding the right talent was always challenging until we partnered with Cetal Deve. They consistently deliver highly skilled professionals who integrate seamlessly with our teams.",
+        "quote": "Perfect Match Every Time"
     }
 ]

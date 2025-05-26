@@ -1,117 +1,79 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Head from "next/head";
+import Link from "next/link";
+import { BriefcaseIcon, MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
 
 import careerData from "./CareerDescription.json";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-const theme = createTheme();
-
 export default function Careers() {
-
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        
-        <main>
-          {/* Hero unit */}
-          <Box
-            sx={{
-              bgcolor: "background.paper",
-              pt: 8,
-              pb: 6,
-            }}
-          >
-            <Container maxWidth="sm">
-              <Typography
-                component="h1"
-                variant="h2"
-                align="center"
-                color="text.primary"
-                gutterBottom
-                sx={{fontSize: ["1.2rem", "3rem"]}}
-              >
-                JOB DESCRIPTIONS
-              </Typography>
-              <Typography
-                variant="h5"
-                align="center"
-                color="text.secondary"
-                paragraph
-                sx={{fontSize: ["1.2rem", "1.8rem"]}}
-              >
-                We have openings for the following position. Please send us your
-                resume or contact us if you are interested in our job offers.
-              </Typography>
-            </Container>
-          </Box>
-          <Container sx={{ py: [1,6] }} maxWidth="md">
-            {/* End hero unit */}
-            <Grid container spacing={4}>
-              {careerData.map((career) => (
-                <Grid item key={1} xs={12} sm={6} md={4}>
-                  <Card
-                    sx={{
-                      height: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <CardContent sx={{ flexGrow: 1 }}>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {career.cardTitle.position}
-                      </Typography>
-                      <Typography className="p-2">
-                       <ul>
-                        <li className="font-semibold text-lg ">
-                        Qualifications:
-                        </li>
-                        <li>
-                        {career.cardTitle.qualification}
-                        </li>
-                        </ul> 
-                        
-                      </Typography>
-                      <Typography>
-                        <ul>
-                          <li className="font-semibold">
-                          Description 
-                          </li>
-                          <li>
-                          {career.jobDescription.description}
-                          </li>
-                        </ul>
-                        
-                       
-                      </Typography>
-                    </CardContent>
-                    
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </main>
-      </ThemeProvider>
-    </>
+    <div className="min-h-screen bg-neutral-50">
+      <Head>
+        <title>Careers - Cetal Deve Solutions</title>
+        <meta name="description" content="Join our team at Cetal Deve Solutions. Explore exciting career opportunities in consulting, technology, and innovation." />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="bg-white">
+        <div className="modern-container py-24">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-5xl font-bold text-secondary-900 mb-6">
+              Join Our <span className="modern-text-gradient">Expert Team</span>
+            </h1>
+            <p className="text-xl text-secondary-600 mb-8 leading-relaxed">
+              Build your career with us and be part of innovative projects that shape the future. 
+              We&apos;re always looking for talented individuals who are passionate about excellence.
+            </p>
+            <p className="text-lg text-secondary-500">
+              Send your resume or contact us if you are interested in our job offers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Job Listings */}
+      <section className="section-padding">
+        <div className="modern-container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {careerData.map((job, index) => (
+              <div key={index} className="modern-card group hover:scale-105 transition-transform duration-300">
+                {/* Job Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <BriefcaseIcon className="w-6 h-6 text-primary-600" />
+                  </div>
+                  <span className="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm font-medium">
+                    Full-time
+                  </span>
+                </div>
+
+                {/* Job Details */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-secondary-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    {job.cardTitle?.position || job.title || "Position Available"}
+                  </h3>
+                  
+                  <div className="flex items-center text-secondary-500 text-sm mb-3">
+                    <MapPinIcon className="w-4 h-4 mr-1" />
+                    Remote / On-site
+                  </div>
+
+                  <p className="text-secondary-600 mb-4 line-clamp-3">
+                    {job.jobDescription?.description || job.description || "Exciting opportunity to join our team."}
+                  </p>
+                </div>
+
+                {/* Apply Button */}
+                <div className="mt-auto">
+                  <button className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow">
+                    Apply Now
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

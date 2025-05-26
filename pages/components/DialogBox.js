@@ -1,93 +1,78 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
-
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
-}));
-
-const BootstrapDialogTitle = (props) => {
-  const { children, onClose, ...other } = props;
-
-  return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-      {children}
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </DialogTitle>
-  );
-};
-
-BootstrapDialogTitle.propTypes = {
-  children: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-};
+import { XMarkIcon } from '@heroicons/react/24/outline';
 
 export default function DialogBox() {
-  
   const [open, setOpen] = React.useState(false);
   
   const handleClickOpen = () => {
     setOpen(true);
   };
+  
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
     <div>
-      <Button className="bg-blue-500 hover:bg-yellow-400 m-4" variant="contained" onClick={handleClickOpen}>
-        Learn More
-      </Button>
-      <BootstrapDialog
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}
+      <button 
+        className="modern-btn-primary"
+        onClick={handleClickOpen}
       >
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          About Us
-        </BootstrapDialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-          Cetal Deve Solutions is a consulting firm committed to provide experienced, excellent and highly skilled 
-          professionals to help with client business requirements. We have an excellent record of client satisfaction as we firmly believe in providing quality over quantity.
-          </Typography>
-          <Typography gutterBottom>
-          We understand finding the right candidate for the business is quite challenging and time consuming. 
-          </Typography>
-          <Typography gutterBottom>
-          With our dedicated pool of resources we help you to choose the right candidate that range from long term to short term without having to comprise with business requirements. 
-          We listen, understand and deliver the right professionals to your business requirements.
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-        </DialogActions>
-      </BootstrapDialog>
+        Learn More
+      </button>
+      
+      {open && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          <div className="flex min-h-screen items-center justify-center p-4">
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-black/50 transition-opacity"
+              onClick={handleClose}
+            ></div>
+            
+            {/* Dialog */}
+            <div className="relative bg-white rounded-lg shadow-xl max-w-lg w-full max-h-screen overflow-hidden">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <h3 className="text-xl font-semibold text-gray-900">
+                  About Us
+                </h3>
+                <button
+                  onClick={handleClose}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <XMarkIcon className="h-6 w-6" />
+                </button>
+              </div>
+              
+              {/* Content */}
+              <div className="p-6 space-y-4">
+                <p className="text-gray-600 leading-relaxed">
+                  Cetal Deve Solutions is a consulting firm committed to provide experienced, excellent and highly skilled 
+                  professionals to help with client business requirements. We have an excellent record of client satisfaction as we firmly believe in providing quality over quantity.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  We understand finding the right candidate for the business is quite challenging and time consuming.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  With our dedicated pool of resources we help you to choose the right candidate that range from long term to short term without having to comprise with business requirements. 
+                  We listen, understand and deliver the right professionals to your business requirements.
+                </p>
+              </div>
+              
+              {/* Footer */}
+              <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                <button
+                  onClick={handleClose}
+                  className="modern-btn-secondary w-full sm:w-auto"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
