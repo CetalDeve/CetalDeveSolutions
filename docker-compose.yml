@@ -1,54 +1,28 @@
 version: '3.8'
 
 services:
-  # Development service
-  dev:
+  # Simple production deployment
+  cetal-website:
     build:
       context: .
       dockerfile: Dockerfile
-      target: builder
     ports:
-      - "3000:3000"
+      - "80:80"
+    restart: unless-stopped
+    container_name: cetal-deve-solutions
+
+  # Optional: Development service for local testing
+  dev:
+    image: node:18-alpine
+    working_dir: /app
     volumes:
       - .:/app
-      - /app/node_modules
-      - /app/.next
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
     environment:
       - NODE_ENV=development
-    command: npm run dev
-
-  # Production build service
-  build:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: builder
-    volumes:
-      - ./out:/app/out
-    environment:
-      - NODE_ENV=production
-    command: npm run build
-
-  # Production static server
-  prod:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: static
-    ports:
-      - "8080:80"
-    depends_on:
-      - build
-    restart: unless-stopped
-
-  # Optional: Database service (if needed in future)
-  # database:
-  #   image: postgres:15-alpine
-  #   environment:
-  #     POSTGRES_DB: cetal_db
-  #     POSTGRES_USER: cetal_user
-  #     POSTGRES_PASSWORD: your_password
-  #   volumes:
+    container_name: cetal-dev
   #     - postgres_data:/var/lib/postgresql/data
   #   ports:
   #     - "5432:5432"

@@ -1,57 +1,29 @@
-# Use the official Node.js runtime as the base image
-FROM node:18-alpine AS base
+# Simple Docker deployment for Cetal Deve Solutions
+FROM nginx:alpine
 
-# Install dependencies only when needed
-FROM base AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
+# Set working directory
+WORKDIR /usr/share/nginx/html
 
-# Copy package files
-COPY package*.json ./
-RUN npm ci --only=production
+# Remove default nginx static assets
+RUN rm -rf ./*
 
-# Rebuild the source code only when needed
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+# Copy the static build files
+COPY ./out .
 
-# Set environment variables for production build
-ENV NEXT_TELEMETRY_DISABLED 1
-ENV NODE_ENV production
+# Create a simple nginx configuration
+RUN echo 'server { \
+    listen 80; \
+    server_name localhost; \
+    location / { \
+        root /usr/share/nginx/html; \
+        index index.html; \
+        try_files $uri $uri/ /index.html; \
+    } \
+    error_page 404 /404.html; \
+}' > /etc/nginx/conf.d/default.conf
 
-# Build the application
-RUN npm run build
-
-# Production image, copy all the files and run next
-FROM base AS runner
-WORKDIR /app
-
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
-
-# Create a non-root user
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-# Copy the standalone output
-COPY --from=builder /app/out ./out
-COPY --from=builder /app/public ./public
-
-# Set the correct permission for prerender cache
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
-
-USER nextjs
-
-EXPOSE 3000
-
-ENV PORT 3000
-
-# Serve the static files using a simple HTTP server
-FROM nginx:alpine AS static
-COPY --from=builder /app/out /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/nginx.conf
+# Expose port 80
 EXPOSE 80
+
+# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
