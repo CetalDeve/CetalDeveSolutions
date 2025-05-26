@@ -1,6 +1,5 @@
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   trailingSlash: true,
   assetPrefix: process.env.NODE_ENV === 'production' ? '/CetalDeveSolutions' : '',
   basePath: process.env.NODE_ENV === 'production' ? '/CetalDeveSolutions' : '',
@@ -11,7 +10,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  
   productionBrowserSourceMaps: false,
 };
 
