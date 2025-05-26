@@ -29,8 +29,8 @@ A modern, responsive consulting website built with Next.js, featuring a clean de
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/asbin4747/ConsultingSite.git
-   cd ConsultingSite
+   git clone https://github.com/CetalDeve/CetalDeveSolutions.git
+   cd CetalDeveSolutions
    ```
 
 2. **Install dependencies:**

@@ -23,7 +23,7 @@ Your Cetal Deve Solutions website is now configured for automatic deployment to 
 ### 🎯 Setup Steps:
 
 #### 1. Enable GitHub Pages in Repository Settings
-1. Go to your repository: https://github.com/asbin4747/ConsultingSite
+1. Go to your repository: https://github.com/CetalDeve/CetalDeveSolutions
 2. Click **Settings** tab
 3. Scroll down to **Pages** section
 4. Under **Source**, select **GitHub Actions**
@@ -44,7 +44,7 @@ git push origin main
 ### 🌐 Your Website URL:
 After deployment, your site will be available at:
 ```
-https://asbin4747.github.io/ConsultingSite/
+https://cetaldeve.github.io/CetalDeveSolutions/
 ```
 
 ### 🔄 Automatic Updates:

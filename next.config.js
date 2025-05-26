@@ -8,8 +8,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/ConsultingSite' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/ConsultingSite' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/CetalDeveSolutions' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/CetalDeveSolutions' : '',
 };
 
 module.exports = nextConfig;
