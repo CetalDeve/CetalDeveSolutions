@@ -78,7 +78,7 @@ function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary-900 mb-1">Our Office</h3>
-                    <p className="text-secondary-600">New York, NY 10012, US</p>
+                    <p className="text-secondary-600">Dallas, TX, US</p>
                   </div>
                 </div>
 
@@ -88,7 +88,7 @@ function Contact() {
                   <div>
                     <h3 className="font-semibold text-secondary-900 mb-1">Email Us</h3>
                     <a href="mailto:info@cetaldevesolutions.com" className="text-primary-600 hover:text-primary-700">
-                      info@cetaldevesolutions.com
+                      contact@cetaldevesolutions.com
                     </a>
                   </div>
                 </div>
@@ -100,7 +100,7 @@ function Contact() {
                   <div>
                     <h3 className="font-semibold text-secondary-900 mb-1">Call Us</h3>
                     <a href="tel:+12345678800" className="text-primary-600 hover:text-primary-700">
-                      +1 (234) 567-8800
+                      +1 (737) 742-1958
                     </a>
                   </div>
                 </div>
@@ -115,11 +115,7 @@ function Contact() {
                     <span>9:00 AM - 6:00 PM EST</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 4:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
+                    <span>Saturday, Sunday</span>
                     <span>Closed</span>
                   </div>
                 </div>

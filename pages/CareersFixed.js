@@ -68,13 +68,13 @@ export default function Careers() {
                   <div className="text-sm text-secondary-600">
                     {job.cardTitle?.qualification || "Strong background in relevant field"}
                   </div>
-                </div>
-
-                {/* Apply Button */}
+                </div>                {/* Apply Button */}
                 <div className="mt-auto">
-                  <button className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow">
-                    Apply Now
-                  </button>
+                  <Link href="/Contact">
+                    <a className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow text-center inline-block">
+                      Apply Now
+                    </a>
+                  </Link>
                 </div>
               </div>
             ))}

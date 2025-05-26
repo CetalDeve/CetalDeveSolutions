@@ -77,7 +77,7 @@ export default function Footer() {
             <div className="space-y-4">              <div className="flex items-start space-x-3">
                 <MapPinIcon className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                 <span className="text-secondary-300">
-                  New York, NY 10012, US
+                  Dallas, TX, US
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -86,7 +86,7 @@ export default function Footer() {
                   href="mailto:info@cetaldevesolutions.com" 
                   className="text-secondary-300 hover:text-white transition-colors duration-200"
                 >
-                  info@cetaldevesolutions.com
+                  contact@cetaldevesolutions.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -95,7 +95,7 @@ export default function Footer() {
                   href="tel:+12345678800" 
                   className="text-secondary-300 hover:text-white transition-colors duration-200"
                 >
-                  +1 (234) 567-8800
+                  +1 (737) 742-1958
                 </a>
               </div>
             </div>

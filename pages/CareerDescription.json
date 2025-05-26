@@ -2,46 +2,46 @@
     {
         "cardTitle": {
             "position": "Automation Tester",
-            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+            "qualification": "3+ years experience in test automation, Selenium WebDriver, TestNG/JUnit, API testing with Postman/REST Assured"
         },
         "jobDescription": {
-            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+            "description": "We are seeking an experienced Automation Tester to design and implement automated testing frameworks. You will work closely with development teams to ensure high-quality software delivery through comprehensive test automation strategies. Experience with CI/CD pipelines, test reporting tools, and agile methodologies is essential."
         }
     },
     {
         "cardTitle": {
             "position": "Java Developer",
-            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+            "qualification": "4+ years Java development, Spring Framework, RESTful APIs, microservices architecture, database design"
         },
         "jobDescription": {
-            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+            "description": "Join our development team as a Java Developer to build scalable backend solutions and enterprise applications. You will be responsible for developing robust APIs, implementing business logic, and optimizing application performance. Experience with Spring Boot, Maven/Gradle, and cloud platforms is highly valued."
         }
     },
     {
         "cardTitle": {
             "position": "UI Engineer",
-            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+            "qualification": "3+ years frontend development, React/Angular/Vue.js, HTML5/CSS3, JavaScript/TypeScript, responsive design"
         },
         "jobDescription": {
-            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+            "description": "We are looking for a talented UI Engineer to create exceptional user interfaces and experiences. You will collaborate with UX designers and backend developers to implement pixel-perfect, responsive web applications. Strong knowledge of modern frontend frameworks, state management, and performance optimization is required."
         }
     },
     {
         "cardTitle": {
             "position": "DevOps Engineer",
-            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+            "qualification": "3+ years DevOps experience, AWS/Azure/GCP, Docker/Kubernetes, CI/CD pipelines, Infrastructure as Code"
         },
         "jobDescription": {
-            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+            "description": "Seeking a DevOps Engineer to streamline our development and deployment processes. You will manage cloud infrastructure, implement automated deployment pipelines, and ensure system reliability and scalability. Experience with monitoring tools, security practices, and containerization technologies is essential."
         }
     },
     {
         "cardTitle": {
             "position": "QE Tester",
-            "qualification": "SQL: 1 year, Selenium: 1 year, Test Automation: 1 year"
+            "qualification": "2+ years QA experience, manual testing, test case design, bug tracking tools, SDLC knowledge"
         },
         "jobDescription": {
-            "description": "Typically requires 5+ years of QE related experience.Good knowledge of Testing Life Cycle, SDLC and Defect Management processes for application support and development, Expert level knowledge with QE Processes, Methodologies and Test Design techniques with hands on experience on ALM, JIRA, JENKINS and Confluence."
+            "description": "We are seeking a detail-oriented QE Tester to ensure the quality and reliability of our software products. You will design test cases, execute comprehensive testing procedures, and collaborate with development teams to identify and resolve issues. Experience with testing methodologies, defect management, and agile processes is required."
         }
     }
 ]

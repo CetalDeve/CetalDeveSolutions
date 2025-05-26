@@ -61,13 +61,13 @@ export default function Careers() {
                   <p className="text-secondary-600 mb-4 line-clamp-3">
                     {job.jobDescription?.description || job.description || "Exciting opportunity to join our team."}
                   </p>
-                </div>
-
-                {/* Apply Button */}
+                </div>                {/* Apply Button */}
                 <div className="mt-auto">
-                  <button className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow">
-                    Apply Now
-                  </button>
+                  <Link href="/Contact">
+                    <a className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow text-center inline-block">
+                      Apply Now
+                    </a>
+                  </Link>
                 </div>
               </div>
             ))}
