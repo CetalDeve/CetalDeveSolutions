@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import axios from "axios";
 import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 function Contact() {
@@ -11,8 +10,6 @@ function Contact() {
     phoneNumber: "",
     message: ""
   });
-  const [state, setState] = useState("idle");
-  const [errorMsg, setErrorMsg] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,25 +18,48 @@ function Contact() {
       [name]: value
     }));
   };
-
-  const subscribe = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setState("Loading");
+    
+    // Validate required fields
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Create email content
+    const subject = `Contact Form Submission from ${formData.firstName} ${formData.lastName}`;
+    const body = `Hello,
 
+I am reaching out from your website contact form.
+
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phoneNumber || 'Not provided'}
+
+Message:
+${formData.message || 'No additional message provided.'}
+
+Thank you for your time. I look forward to hearing from you.
+
+Best regards,
+${formData.firstName} ${formData.lastName}`;
+
+    // Create mailto link
+    const mailtoLink = `mailto:contact@cetaldevesolutions.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client (works on mobile and desktop)
     try {
-      const response = await axios.post("/api/subscribe", formData);
-      setState("Success");
-      setFormData({
-        email: "",
-        firstName: "",
-        lastName: "",
-        phoneNumber: "",
-        message: ""
-      });
-    } catch (e) {
-      console.log("Error", e.response);
-      setErrorMsg("Error happened, please try again later");
-      setState("Error");
+      window.location.href = mailtoLink;
+      
+      // Provide user feedback
+      setTimeout(() => {
+        alert('Your email client should have opened with a pre-filled message. If it didn\'t open, please email us directly at contact@cetaldevesolutions.com');
+      }, 1000);
+      
+    } catch (error) {
+      // Fallback for any issues
+      alert('Unable to open email client. Please send an email directly to contact@cetaldevesolutions.com');
     }
   };
 
@@ -126,7 +146,7 @@ function Contact() {
             <div className="modern-card">
               <h2 className="text-2xl font-bold text-secondary-900 mb-6">Send Us a Message</h2>
               
-              <form onSubmit={subscribe} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-secondary-700 mb-2">
@@ -200,27 +220,27 @@ function Contact() {
                     className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
                     placeholder="Tell us about your project or how we can help..."
                   />
-                </div>
-
-                <button
+                </div>                <button
                   type="submit"
-                  disabled={state === "Loading"}
-                  className="w-full modern-btn-primary text-lg py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full modern-btn-primary text-lg py-3"
                 >
-                  {state === "Loading" ? "Sending..." : "Send Message"}
+                  📧 Send Message
                 </button>
 
-                {state === 'Error' && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <p className="text-red-600">{errorMsg}</p>
-                  </div>
-                )}
-                
-                {state === 'Success' && (
-                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-600">Thank you! Your message has been sent successfully.</p>
-                  </div>
-                )}
+                <div className="text-sm text-secondary-600 text-center space-y-2">
+                  <p>
+                    Clicking &quot;Send Message&quot; will open your email client with a pre-filled email.
+                  </p>
+                  <p className="text-xs">
+                    <strong>Mobile users:</strong> This will open your default email app (Mail, Gmail, Outlook, etc.)
+                  </p>
+                  <p className="text-xs">
+                    <strong>Alternative:</strong> Email us directly at{' '}
+                    <a href="mailto:contact@cetaldevesolutions.com" className="text-primary-600 hover:text-primary-700 underline">
+                      contact@cetaldevesolutions.com
+                    </a>
+                  </p>
+                </div>
               </form>
             </div>
           </div>
