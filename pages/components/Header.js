@@ -20,7 +20,7 @@ function Header() {
         <div className="flex h-16 items-center justify-between">          {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg  flex items-center justify-center">
                 <img 
                   src="/logo.png" 
                   alt="Cetal Deve Solutions" 
