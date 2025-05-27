@@ -1,8 +1,7 @@
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/CetalDeveSolutions' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/CetalDeveSolutions' : '',
+  // Remove assetPrefix and basePath for custom domain deployment
   output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
