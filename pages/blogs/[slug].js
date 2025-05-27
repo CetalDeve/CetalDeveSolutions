@@ -11,9 +11,8 @@ export default function PostPage({
 }) {
   return (
     <>
-      <div className="flex-row m-8 p-2 ">
-        <Link href="/Blog">
-          <a className="btn">Go Back</a>
+      <div className="flex-row m-8 p-2 ">        <Link href="/Blog" className="btn">
+          Go Back
         </Link>
         <div className="text-center">
           <h1 className="font-bold text-2xl mt-4 ">{title}</h1>          <div className="post-date mt-3">Posted on {date}</div>

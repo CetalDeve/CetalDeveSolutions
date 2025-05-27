@@ -41,32 +41,21 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-            <nav className="space-y-3">
-              <Link href="/">
-                <a className="block text-secondary-300 hover:text-white transition-colors duration-200">
-                  Home
-                </a>
+            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>            <nav className="space-y-3">
+              <Link href="/" className="block text-secondary-300 hover:text-white transition-colors duration-200">
+                Home
               </Link>
-              <Link href="#services">
-                <a className="block text-secondary-300 hover:text-white transition-colors duration-200">
-                  Services
-                </a>
+              <Link href="#services" className="block text-secondary-300 hover:text-white transition-colors duration-200">
+                Services
               </Link>
-              <Link href="#about">
-                <a className="block text-secondary-300 hover:text-white transition-colors duration-200">
-                  About
-                </a>
+              <Link href="#about" className="block text-secondary-300 hover:text-white transition-colors duration-200">
+                About
               </Link>
-              <Link href="/Careers">
-                <a className="block text-secondary-300 hover:text-white transition-colors duration-200">
-                  Careers
-                </a>
+              <Link href="/Careers" className="block text-secondary-300 hover:text-white transition-colors duration-200">
+                Careers
               </Link>
-              <Link href="/Blog">
-                <a className="block text-secondary-300 hover:text-white transition-colors duration-200">
-                  Blog
-                </a>
+              <Link href="/Blog" className="block text-secondary-300 hover:text-white transition-colors duration-200">
+                Blog
               </Link>
             </nav>
           </div>

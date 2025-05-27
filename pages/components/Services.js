@@ -54,11 +54,8 @@ export default function Services() {
         {/* CTA Section */}
         <div className="text-center mt-16">          <p className="text-lg text-secondary-600 mb-8">
             Ready to transform your business? Let&apos;s discuss your specific needs.
-          </p>
-          <Link href="/Contact">
-            <a className="modern-btn-primary text-lg px-8 py-4">
-              Schedule a Consultation
-            </a>
+          </p>          <Link href="/Contact" className="modern-btn-primary text-lg px-8 py-4">
+            Schedule a Consultation
           </Link>
         </div>
       </div>

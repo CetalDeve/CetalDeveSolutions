@@ -62,10 +62,8 @@ export default function Careers() {
                   </p>
                 </div>                {/* Apply Button */}
                 <div className="mt-auto">
-                  <Link href="/Contact">
-                    <a className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow text-center inline-block">
-                      Apply Now
-                    </a>
+                  <Link href="/Contact" className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow text-center inline-block">
+                    Apply Now
                   </Link>
                 </div>
               </div>

@@ -23,11 +23,8 @@ function FeaturedPost({ post }) {
           </p>
           <p className="text-gray-600 mb-4">
             {excerpt}
-          </p>
-          <Link href={`/blogs/${slug}`}>
-            <a className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200">
-              Read More
-            </a>
+          </p>          <Link href={`/blogs/${slug}`} className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200">
+            Read More
           </Link>
         </div>
         <div className="md:w-40 flex-shrink-0">

@@ -19,17 +19,12 @@ export default function AboutImage() {
             We deliver innovative solutions that drive growth, optimize operations, 
             and accelerate your digital transformation journey.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/Contact">
-              <a className="modern-btn-primary text-lg px-8 py-4">
-                Start Your Journey
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/Contact" className="modern-btn-primary text-lg px-8 py-4">
+              Start Your Journey
             </Link>
-            <Link href="#services">
-              <a className="inline-flex items-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white hover:bg-white hover:text-secondary-900 transition-all duration-200">
-                Our Services
-              </a>
+            <Link href="#services" className="inline-flex items-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white hover:bg-white hover:text-secondary-900 transition-all duration-200">
+              Our Services
             </Link>
           </div>
         </div>

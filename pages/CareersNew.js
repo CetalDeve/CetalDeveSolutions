@@ -71,10 +71,8 @@ export default function Careers() {
                   </div>
                 </div>                {/* Apply Button */}
                 <div className="mt-auto">
-                  <Link href="/Contact">
-                    <a className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow text-center inline-block">
-                      Apply Now
-                    </a>
+                  <Link href="/Contact" className="modern-btn-primary w-full group-hover:shadow-lg transition-shadow text-center inline-block">
+                    Apply Now
                   </Link>
                 </div>
               </div>
@@ -87,11 +85,8 @@ export default function Careers() {
               <BriefcaseIcon className="w-16 h-16 text-secondary-300 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">No Open Positions</h3>              <p className="text-secondary-600 mb-6">
                 We don&apos;t have any open positions at the moment, but we&apos;re always interested in meeting talented people.
-              </p>
-              <Link href="/Contact">
-                <a className="modern-btn-secondary">
-                  Contact Us
-                </a>
+              </p>              <Link href="/Contact" className="modern-btn-secondary">
+                Contact Us
               </Link>
             </div>
           )}
@@ -105,11 +100,8 @@ export default function Careers() {
             <h2 className="text-3xl font-bold mb-4">Ready to Join Our Team?</h2>            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
               Don&apos;t see a position that fits? We&apos;re always looking for exceptional talent. 
               Send us your resume and let&apos;s start a conversation.
-            </p>
-            <Link href="/Contact">
-              <a className="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors">
-                Get In Touch
-              </a>
+            </p>            <Link href="/Contact" className="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors">
+              Get In Touch
             </Link>
           </div>
         </div>

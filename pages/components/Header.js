@@ -17,43 +17,33 @@ function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="modern-container" aria-label="Global">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+        <div className="flex h-16 items-center justify-between">          {/* Logo */}
           <div className="flex items-center">
-            <Link href="/">
-              <a className="flex items-center space-x-2">                <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
-                  <img 
-                    src="/logo.png" 
-                    alt="Cetal Deve Solutions" 
-                    width={32} 
-                    height={32}
-                    className="w-8 h-8"
-                  />
-                </div>
-                <span className="text-xl font-bold text-secondary-900">
-                  Cetal Deve Solutions
-                </span>
-              </a>
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
+                <img 
+                  src="/logo.png" 
+                  alt="Cetal Deve Solutions" 
+                  width={32} 
+                  height={32}
+                  className="w-8 h-8"
+                />
+              </div>
+              <span className="text-xl font-bold text-secondary-900">
+                Cetal Deve Solutions
+              </span>
             </Link>
-          </div>
-
-          {/* Desktop navigation */}
+          </div>          {/* Desktop navigation */}
           <div className="hidden lg:flex lg:gap-x-8">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href}>
-                <a className="nav-link">
-                  {item.name}
-                </a>
+              <Link key={item.name} href={item.href} className="nav-link">
+                {item.name}
               </Link>
             ))}
-          </div>
-
-          {/* CTA Button */}
+          </div>          {/* CTA Button */}
           <div className="hidden lg:flex lg:items-center lg:gap-x-6">
-            <Link href="/Contact">
-              <a className="modern-btn-primary">
-                Get Started
-              </a>
+            <Link href="/Contact" className="modern-btn-primary">
+              Get Started
             </Link>
           </div>
 
@@ -70,29 +60,26 @@ function Header() {
               )}
             </button>
           </div>
-        </div>
-
-        {/* Mobile menu */}
+        </div>        {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden">
             <div className="space-y-2 px-2 pt-2 pb-3">
               {navigation.map((item) => (
-                <Link key={item.name} href={item.href}>
-                  <a 
-                    className="block rounded-md px-3 py-2 text-base font-medium text-secondary-900 hover:bg-secondary-50"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                </Link>
-              ))}
-              <Link href="/Contact">
-                <a 
-                  className="block w-full text-center modern-btn-primary mt-4"
+                <Link 
+                  key={item.name} 
+                  href={item.href}
+                  className="block rounded-md px-3 py-2 text-base font-medium text-secondary-900 hover:bg-secondary-50"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Started
-                </a>
+                  {item.name}
+                </Link>
+              ))}
+              <Link 
+                href="/Contact"
+                className="block w-full text-center modern-btn-primary mt-4"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get Started
               </Link>
             </div>
           </div>
