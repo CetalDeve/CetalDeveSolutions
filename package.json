@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && copy CNAME out\\CNAME",
+    "build": "next build && node -e \"require('fs').copyFileSync('CNAME', 'out/CNAME')\"",
+    "build:win": "next build && copy CNAME out\\CNAME",
     "start": "next start",
     "lint": "next lint"
   },
