@@ -106,8 +106,7 @@ ${formData.firstName} ${formData.lastName}`;
                     <EnvelopeIcon className="w-6 h-6 text-primary-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary-900 mb-1">Email Us</h3>
-                    <a href="mailto:info@cetaldevesolutions.com" className="text-primary-600 hover:text-primary-700">
+                    <h3 className="font-semibold text-secondary-900 mb-1">Email Us</h3>                    <a href="mailto:contact@cetaldevesolutions.com" className="text-primary-600 hover:text-primary-700">
                       contact@cetaldevesolutions.com
                     </a>
                   </div>
